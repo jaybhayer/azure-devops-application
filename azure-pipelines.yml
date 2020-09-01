@@ -73,6 +73,7 @@ jobs:
   - script: |
      
       cd src/angular7
+      npm i postinstall
       #npm i
       #npm i postinstall
       
