@@ -9,7 +9,7 @@
     "test": "npm run install-puppeteer && ng test",
     "lint": "ng lint",
     "e2e": "npm run install-puppeteer && ng e2e",
-    "postinstall": "*"
+    "postinstall": "node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.75"
   },
   "private": true,
   "dependencies": {
@@ -49,8 +49,5 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  },
-  "postinstall": {
-     "postinstall": "node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.75"
   }
 }
