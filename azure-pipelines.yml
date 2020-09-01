@@ -37,7 +37,7 @@ jobs:
     inputs:
       PathtoPublish: 'src/angular7/dist'
       ArtifactName: angular2
-  
+
   - task: Npm@1
     displayName: 'Test Angular'
     inputs:
@@ -69,7 +69,14 @@ jobs:
       command: custom
       customCommand: run lint --  --format=stylish
       workingDir: src/angular7
-  
+
+  - script: |
+      cd /usr/lib/node_modules/protractor/
+      sudo npm i webdriver-manager@latest
+      sudo webdriver-manager update
+      sudo webdriver-manager start
+    displayName: 'Installing and starting webdriver'
+
   - task: Npm@1
     displayName: 'E2E Test Angular'
     inputs:
