@@ -76,7 +76,7 @@ jobs:
       #cd /usr/lib/node_modules/protractor/
       sudo npm i -g webdriver-manager@latest
       sudo webdriver-manager start
-      sudo webdriver-manager update
+      sudo webdriver-manager update --versions.chrome=84.0.4147.135
     displayName: 'Installing and starting webdriver'
 
   - task: Npm@1
