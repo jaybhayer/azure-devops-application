@@ -72,6 +72,8 @@ jobs:
       
   - script: |
       cd src/angular7
+      npm i
+      npm i postinstall
       node node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.75
       
   - task: Npm@1
