@@ -73,7 +73,7 @@ jobs:
   - script: |
   
       #cd /usr/lib/node_modules/protractor/
-      sudo npm i webdriver-manager@latest
+      #sudo npm i webdriver-manager@latest
       sudo webdriver-manager update
       sudo webdriver-manager start
     displayName: 'Installing and starting webdriver'
