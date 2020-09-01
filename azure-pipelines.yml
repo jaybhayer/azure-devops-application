@@ -73,7 +73,7 @@ jobs:
   - script: |
      
       cd src/angular7
-      node node_modules/.bin/webdriver-manager update --versions.chrome=74.0.3729.6 --gecko false --standalone false
+      sudo node node_modules/.bin/webdriver-manager update --versions.chrome=74.0.3729.6 --gecko false --standalone false
       npm i postinstall
 
       #npm i
