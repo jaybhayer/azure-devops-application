@@ -71,7 +71,8 @@ jobs:
       workingDir: src/angular7
 
   - script: |
-      cd /usr/lib/node_modules/protractor/
+  
+      #cd /usr/lib/node_modules/protractor/
       sudo npm i webdriver-manager@latest
       sudo webdriver-manager update
       sudo webdriver-manager start
