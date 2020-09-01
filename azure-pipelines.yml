@@ -74,7 +74,7 @@ jobs:
       cd src/angular7
 
       #cd /usr/lib/node_modules/protractor/
-      sudo npm i webdriver-manager@latest
+      sudo npm i -g webdriver-manager@latest
       sudo node webdriver-manager start
       sudo node webdriver-manager update
     displayName: 'Installing and starting webdriver'
