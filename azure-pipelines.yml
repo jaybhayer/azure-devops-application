@@ -72,10 +72,14 @@ jobs:
 
   - script: |
       cd src/angular7
+      sudo rm -rf node_modules
       npm i caniuse-lite browserslist
-      
+      npm install
+      npm install -f
+
       #npm update caniuse-lite browserslist
-    displayName: 'Installing caniuse-lite browserslist'
+
+    displayName: 'Cleaning and installing node_modules and caniuse-lite browserslist'
   - task: Npm@1
     displayName: 'E2E Test Angular'
     inputs:
