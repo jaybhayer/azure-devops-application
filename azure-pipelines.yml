@@ -4,12 +4,6 @@ jobs:
 - job: Angular
   steps:
   
-  - script: |
-      echo '#####################################Chrome version is#############################################'
-      google-chrome --version
-      echo '#####################################Protractor version is#############################################'
-      protractor --version
-    displayName: 'Chrome and Protractor version'
 
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
@@ -22,7 +16,14 @@ jobs:
     inputs:
       command: install
       workingDir: src/angular7
-  
+
+  - script: |
+      echo '#####################################Chrome version is#############################################'
+      google-chrome --version
+      echo '#####################################Protractor version is#############################################'
+      protractor --version
+    displayName: 'Chrome and Protractor version'
+      
   - task: Npm@1
     displayName: 'Build Angular'
     inputs:
