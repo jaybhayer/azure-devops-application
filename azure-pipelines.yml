@@ -70,6 +70,12 @@ jobs:
       customCommand: run lint --  --format=stylish
       workingDir: src/angular7
 
+  - script: |
+      cd src/angular7
+      npm i caniuse-lite browserslist
+      
+      #npm update caniuse-lite browserslist
+    displayName: 'Installing caniuse-lite browserslist'
   - task: Npm@1
     displayName: 'E2E Test Angular'
     inputs:
