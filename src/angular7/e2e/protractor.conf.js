@@ -1,3 +1,6 @@
+// Protractor configuration file, see link for more information
+// https://github.com/angular/protractor/blob/master/lib/config.ts
+
 const { SpecReporter } = require('jasmine-spec-reporter');
 const { JUnitXmlReporter } = require('jasmine-reporters');
 
@@ -8,14 +11,7 @@ exports.config = {
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
- /* multiCapabilities: {
-    'browserName': 'firefox',
-      firefoxOptions: {
-      args: ['--headless']
-    },
-      'moz:firefoxOptions': {
-      args: [ '--headless' ]
-    }*/
+  capabilities: {
     'browserName': 'chrome',
 
     chromeOptions: {
