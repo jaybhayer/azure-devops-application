@@ -9,7 +9,6 @@
     "test": "npm run install-puppeteer && ng test",
     "lint": "ng lint",
     "e2e": "npm run install-puppeteer && ng e2e",
-    "_postinstall": "node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.75"
     "postinstall": "./node_modules/protractor/bin/webdriver-manager update --versions.chrome=77.0.3865.75"
   },
   "private": true,
