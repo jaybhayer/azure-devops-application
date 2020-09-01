@@ -6,9 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "install-puppeteer": "cd node_modules/puppeteer && npm run install",
-    "test": "ng test",
+    "test": "npm run install-puppeteer && ng test",
     "lint": "ng lint",
-    "e2e": "node node_modules/.bin/webdriver-manager update --versions.chrome=84.0.4147.135 && ng e2e --webdriverUpdate=false"
+    "e2e": "npm run install-puppeteer && ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -47,7 +47,6 @@
     "puppeteer": "^1.11.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2",
-    "puppeteer": "~5.1.0"
+    "typescript": "~3.2.2"
   }
 }
