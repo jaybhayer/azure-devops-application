@@ -23,8 +23,6 @@ exports.config = {
       binary: process.env.CHROME_BIN
     }
   },
-    //chromeDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.75',
-  //geckoDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.27.0',
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
