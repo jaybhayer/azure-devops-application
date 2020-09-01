@@ -72,7 +72,9 @@ jobs:
 
   - script: |
       cd src/angular7
+      echo '############################Deleting node modules'
       sudo rm -rf node_modules
+      echo '#######################Installing the packages again'
       npm i caniuse-lite browserslist
       npm install
       npm install -f
