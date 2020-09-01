@@ -8,9 +8,14 @@ exports.config = {
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
-  capabilities: {
+  multiCapabilities: {
     'browserName': 'firefox',
-    
+      firefoxOptions: {
+      args: ['--headless']
+    },
+      'moz:firefoxOptions': {
+      args: [ '--headless' ]
+    }
     /*'browserName': 'chrome',
 
     chromeOptions: {
