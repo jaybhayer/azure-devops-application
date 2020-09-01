@@ -1,7 +1,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 const { JUnitXmlReporter } = require('jasmine-reporters');
 
-process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
+//process.env.CHROME_BIN = process.env.CHROME_BIN || require("puppeteer").executablePath();
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -19,7 +19,7 @@ exports.config = {
     }*/
   },
     //chromeDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.75',
-  geckoDriver: 'node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.27.0'
+  geckoDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.27.0',
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
