@@ -9,7 +9,7 @@
     "test": "npm run install-puppeteer && ng test",
     "lint": "ng lint",
     "e2e": "npm run install-puppeteer && ng e2e",
-    "postinstall": "postinstall"
+    "postinstall": "*"
   },
   "private": true,
   "dependencies": {
