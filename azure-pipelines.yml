@@ -89,7 +89,8 @@ jobs:
       echo '#####################################Chrome version is#############################################'
       google-chrome --version
       echo '#####################################Protractor version is#############################################'
-      protractor --version
+      
+      #protractor --version
     displayName: 'Chrome and Protractor version'      
     
   - task: Npm@1
