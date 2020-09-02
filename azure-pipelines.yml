@@ -7,22 +7,45 @@ jobs:
   - script: |
       cd src/angular7
       echo '###########################################################'
-      echo '#          Updating NPM and other dependencies            #'
+      echo '#          Installing angular cli                         #'
       echo '###########################################################'
       
       sudo rm package-lock.json
       #sudo npm rm -rf node_modules
       sudo npm install --save-dev @angular/cli@latest
+      
+      
+      
+      
+      
+      #sudo ng update 
+       
+    displayName: 'Installing angular cli'
+
+  - script: |
       sudo npm uninstall @angular-devkit/build-angular
       sudo npm i --save-dev @angular-devkit/build-angular@latest
-      sudo npm install -g rxjs-tslint 
-      sudo npm install --save-dev typescript@3.4.5
-      sudo npm link @angular/cli
-      sudo npm install @angular-devkit/schematics @angular-devkit/core @schematics/angular
-      #sudo ng update 
-      sudo ng update @angular/cli @angular/core --allow-dirty --force 
-    displayName: 'Updating NPM and other dependencies'
+    displayName: 'Removing and installing angular-devkit'
 
+  - script: |
+      sudo npm install -g rxjs-tslint 
+    displayName: 'Installing rxjs-tslint'
+
+  - script: |
+      sudo npm install --save-dev typescript@3.4.5
+    displayName: 'Installing typescript'
+
+  - script: 
+      sudo npm link @angular/cli
+    displayName: 'Linking angular cli'
+
+  - script: |
+      sudo npm install @angular-devkit/schematics @angular-devkit/core @schematics/angular
+    displayName: 'Installing angular-devkit/schematics'
+
+  - script: |
+      sudo ng update @angular/cli @angular/core --allow-dirty --force
+    displayName: 'Updating angular/cli'
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
     inputs:
