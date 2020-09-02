@@ -11,7 +11,7 @@ jobs:
       echo '###########################################################'
       
       sudo npm uninstall @angular-devkit/build-angular
-      #sudo npm i --save-dev @angular-devkit/build-angular@latest
+      sudo npm i --save-dev @angular-devkit/build-angular
       sudo npm install
       sudo npm update 
       sudo npm update @angular/cli @angular/core 
