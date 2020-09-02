@@ -20,7 +20,7 @@ jobs:
       sudo npm link @angular/cli
       #sudo npm install @angular-devkit/schematics @angular-devkit/core @schematics/angular
       #sudo ng update 
-      #sudo ng update @angular/cli @angular/core --allow-dirty --force 
+      sudo ng update @angular/cli @angular/core --allow-dirty --force 
     displayName: 'Updating NPM and other dependencies'
 
   - task: DeleteFiles@1
