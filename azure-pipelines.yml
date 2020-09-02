@@ -6,9 +6,12 @@ jobs:
   
   - script: |
       echo '###########################################################'
-      echo '#                     Updating NPM                        #'
+      echo '#          Updating NPM and other dependencies            #'
       echo '###########################################################'
+      sudo npm uninstall @angular-devkit/build-angular
+      sudo npm i --save-dev @angular-devkit/build-angular@latest
       sudo npm update 
+      sudo npm update @angular/cli @angular/core 
     displayName: 'Updating NPM'
 
   - task: DeleteFiles@1
