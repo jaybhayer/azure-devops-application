@@ -4,6 +4,12 @@ jobs:
 - job: Angular
   steps:
   
+  - script: |
+      echo '###########################################################'
+      echo '#                     Updating NPM                        #'
+      echo '###########################################################'
+      sudo npm update 
+    displayName: 'Updating NPM'
 
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
@@ -81,17 +87,9 @@ jobs:
       #npm i postinstall
       
       #node node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.75
-    displayName: 'Updating webdriver'  
-
-  - script: |
-      echo '#####################################Chrome version is#############################################'
-      google-chrome --version
-      echo '#####################################Protractor version is#############################################'
-      
-      #protractor --version
-    displayName: 'Chrome and Protractor version'      
+    displayName: 'Updating webdriver'        
     
-  #- task: Npm@1
+    #- task: Npm@1
    # displayName: 'E2E Test Angular'
     #inputs:
      # command: custom
@@ -101,11 +99,15 @@ jobs:
   - script: |
       cd src/angular7  
       sudo npm link @angular/cli
-      sudo ng update @angular/cli
-      echo '##########################Installing protractor builder############################################'
-      sudo npm install @angular-devkit/build-angular:protractor
+      
+      #sudo ng update @angular/cli
+      #echo '##########################Installing protractor builder############################################'
+      #sudo npm install @angular-devkit/build-angular:protractor
       
       #sudo npm uninstall @angular-devkit/build-angular
+      echo '###################################################################################################'
+      echo '#                                  Starting E2E Tests                                             #'
+      echo '###################################################################################################'
       ng e2e
 
   
