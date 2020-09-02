@@ -52,13 +52,12 @@ jobs:
       PathtoPublish: 'src/angular7/dist'
       ArtifactName: angular2
 
-  - task: Npm@1
-    displayName: 'Test Angular'
-    inputs:
-      command: custom
-      customCommand: ls -l 
-      #run test -- --watch=false --code-coverage
-      workingDir: src/angular7
+  #- task: Npm@1
+   # displayName: 'Test Angular'
+    #inputs:
+     # command: custom
+      #customCommand: run test -- --watch=false --code-coverage
+      #workingDir: src/angular7
   
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage Angular results'
