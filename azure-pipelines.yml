@@ -17,10 +17,6 @@ jobs:
       command: install
       workingDir: src/angular7
 
-  - script: |
-      sudo npm install --save-dev @angular-devkit/build-angular
-    displayName: 'Installing devkit'   
-      
   - task: Npm@1
     displayName: 'Build Angular'
     inputs:
