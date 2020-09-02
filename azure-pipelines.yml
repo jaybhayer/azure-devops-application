@@ -16,7 +16,7 @@ jobs:
       #sudo npm uninstall @angular-devkit/build-angular
       sudo npm i --save-dev @angular-devkit/build-angular@latest
       sudo npm install -g rxjs-tslint 
-      #sudo npm install --save-dev typescript@3.4.5
+      sudo npm install --save-dev typescript@3.4.5
       sudo npm link @angular/cli
       sudo npm install @angular-devkit/schematics @angular-devkit/core @schematics/angular
       #sudo ng update 
