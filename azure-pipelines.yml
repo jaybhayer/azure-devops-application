@@ -102,6 +102,7 @@ jobs:
 
   - script: |
       cd src/angular7  
+      npm link @angular/cli
       ng e2e
 
   
