@@ -61,7 +61,7 @@ jobs:
   
   - script: |
       cd src/angular7
-      sudo npm install --save-dev @types/node
+      sudo npm install --save-dev @types/node@latest
       npm run test -- --watch=false --code-coverage
     displayName: 'Executing unit tests'
     
