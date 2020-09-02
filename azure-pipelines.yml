@@ -50,7 +50,7 @@ jobs:
 
   - script: |
        cd src/angular7
-       ng update @angular/cli @angular/core --allow-dirty
+       npm update @angular/cli @angular/core --allow-dirty
     displayName: 'Updating angular/cli'
 
   - task: DeleteFiles@1
