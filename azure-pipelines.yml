@@ -97,7 +97,7 @@ jobs:
     displayName: 'E2E Test Angular'
     inputs:
       command: custom
-      customCommand: sudo npm run install-puppeteer && sudo ng e2e
+      customCommand: npm run install-puppeteer && ng e2e
       workingDir: src/angular7
   
   - task: PublishTestResults@2
