@@ -56,7 +56,8 @@ jobs:
     displayName: 'Test Angular'
     inputs:
       command: custom
-      customCommand: run test -- --watch=false --code-coverage
+      customCommand: ls -l 
+      #run test -- --watch=false --code-coverage
       workingDir: src/angular7
   
   - task: PublishCodeCoverageResults@1
