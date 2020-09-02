@@ -102,6 +102,7 @@ jobs:
       cd src/angular7  
       sudo npm link @angular/cli
       sudo ng update @angular/cli
+      
       #sudo npm uninstall @angular-devkit/build-angular
       ng e2e
 
