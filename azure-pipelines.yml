@@ -23,7 +23,7 @@ jobs:
     displayName: 'Build Angular'
     inputs:
       command: custom
-      customCommand: run build -- --prod
+      customCommand: sudo npm install --save-dev @angular-devkit/build-angular && run build -- --prod
       workingDir: src/angular7
   
   - task: PublishPipelineArtifact@0
@@ -103,8 +103,8 @@ jobs:
   - script: |
       cd src/angular7  
       sudo npm link @angular/cli
-      sudo npm uninstall @angular-devkit/build-angular
-      sudo npm install --save-dev @angular-devkit/build-angular
+      
+      #sudo npm uninstall @angular-devkit/build-angular
       ng e2e
 
   
