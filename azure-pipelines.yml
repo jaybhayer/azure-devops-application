@@ -5,6 +5,7 @@ jobs:
   steps:
   
   - script: |
+      cd src/angular7
       echo '###########################################################'
       echo '#          Updating NPM and other dependencies            #'
       echo '###########################################################'
