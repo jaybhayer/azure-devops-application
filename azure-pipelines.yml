@@ -9,8 +9,10 @@ jobs:
       echo '###########################################################'
       echo '#          Updating NPM and other dependencies            #'
       echo '###########################################################'
+      
       sudo npm uninstall @angular-devkit/build-angular
-      sudo npm i --save-dev @angular-devkit/build-angular@latest
+      #sudo npm i --save-dev @angular-devkit/build-angular@latest
+      sudo npm install
       sudo npm update 
       sudo npm update @angular/cli @angular/core 
     displayName: 'Updating NPM and other dependencies'
@@ -21,11 +23,11 @@ jobs:
       SourceFolder: src/angular7/junit
       Contents: 'TEST*.xml'
   
-  - task: Npm@1
-    displayName: 'npm install'
-    inputs:
-      command: install
-      workingDir: src/angular7
+ # - task: Npm@1
+  #  displayName: 'npm install'
+  #  inputs:
+  #    command: install
+  #    workingDir: src/angular7
 
   - task: Npm@1
     displayName: 'Build Angular'
