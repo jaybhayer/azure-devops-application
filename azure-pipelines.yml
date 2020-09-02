@@ -44,7 +44,7 @@ jobs:
     displayName: 'Installing angular-devkit/schematics'
 
   - script: |
-      sudo ng update @angular/cli @angular/core --allow-dirty --force
+      sudo ng update @angular/cli @angular/core --allow-dirty
     displayName: 'Updating angular/cli'
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
