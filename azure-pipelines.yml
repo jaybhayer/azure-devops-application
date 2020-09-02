@@ -23,29 +23,36 @@ jobs:
     displayName: 'Installing angular cli'
 
   - script: |
+      cd src/angular7
       sudo npm uninstall @angular-devkit/build-angular
       sudo npm i --save-dev @angular-devkit/build-angular@latest
     displayName: 'Removing and installing angular-devkit'
 
   - script: |
+      cd src/angular7
       sudo npm install -g rxjs-tslint 
     displayName: 'Installing rxjs-tslint'
 
   - script: |
+      cd src/angular7
       sudo npm install --save-dev typescript@3.4.5
     displayName: 'Installing typescript'
 
   - script: 
+      cd src/angular7
       sudo npm link @angular/cli
     displayName: 'Linking angular cli'
 
   - script: |
+      cd src/angular7
       sudo npm install @angular-devkit/schematics @angular-devkit/core @schematics/angular
     displayName: 'Installing angular-devkit/schematics'
 
- # - script: |
-   #   sudo ng update @angular/cli @angular/core --allow-dirty
-   # displayName: 'Updating angular/cli'
+  - script: |
+       cd src/angular7
+       ng update @angular/cli @angular/core --allow-dirty
+    displayName: 'Updating angular/cli'
+
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
     inputs:
