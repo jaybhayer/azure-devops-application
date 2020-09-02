@@ -10,7 +10,7 @@ jobs:
       echo '#          Updating NPM and other dependencies            #'
       echo '###########################################################'
       
-      #sudo rm package-lock.json
+      sudo rm package-lock.json
       #sudo npm rm -rf node_modules
       sudo npm install --save-dev @angular/cli@latest
       #sudo npm uninstall @angular-devkit/build-angular
