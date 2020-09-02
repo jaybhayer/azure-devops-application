@@ -12,8 +12,8 @@ jobs:
       
       sudo rm package-lock.json
       #sudo npm rm -rf node_modules
-      #sudo npm install --save-dev @angular/cli@latest
-      sudo npm uninstall @angular-devkit/build-angular
+      sudo npm install --save-dev @angular/cli@latest
+      #sudo npm uninstall @angular-devkit/build-angular
       sudo npm i --save-dev @angular-devkit/build-angular@latest
       sudo npm install -g rxjs-tslint 
       sudo npm install --save-dev typescript@3.4.5
