@@ -12,7 +12,7 @@ jobs:
       sudo npm i --save-dev @angular-devkit/build-angular@latest
       sudo npm update 
       sudo npm update @angular/cli @angular/core 
-    displayName: 'Updating NPM'
+    displayName: 'Updating NPM and other dependencies'
 
   - task: DeleteFiles@1
     displayName: 'Delete JUnit files'
