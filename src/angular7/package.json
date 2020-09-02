@@ -8,7 +8,6 @@
     "install-puppeteer": "cd node_modules/puppeteer && npm run install",
     "test": "npm run install-puppeteer && ng test",
     "lint": "ng lint",
-    "_e2e": "npm run install-puppeteer && ng e2e",
     "postinstall": "node_modules/.bin/webdriver-manager update --versions.chrome=74.0.3729.6 --gecko false --standalone false"
   },
   "private": true,
