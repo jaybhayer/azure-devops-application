@@ -19,7 +19,6 @@ exports.config = {
       binary: process.env.CHROME_BIN
     }
   },
-  chromeDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_74.0.3729.6',
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
