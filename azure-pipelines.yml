@@ -72,12 +72,12 @@ jobs:
      
       cd src/angular7
 
-      sudo npm install -g webdriver-manager@12.1.4 --force
-      sudo npm install -g protractor --force
+      #sudo npm install -g webdriver-manager@12.1.4 --force
+      #sudo npm install -g protractor --force
       sudo node node_modules/.bin/webdriver-manager version
       sudo node node_modules/.bin/webdriver-manager update --force
       #node node_modules/.bin/webdriver-manager update --versions.chrome=74.0.3729.6 --gecko false --standalone false
-      sudo npm i postinstall --force
+      #sudo npm i postinstall --force
 
       #npm i
       #npm i postinstall
