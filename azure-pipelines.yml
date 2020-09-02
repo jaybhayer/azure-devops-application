@@ -59,23 +59,23 @@ jobs:
       #customCommand: run test -- --watch=false --code-coverage
       #workingDir: src/angular7
   
-  - task: PublishCodeCoverageResults@1
-    displayName: 'Publish code coverage Angular results'
-    condition: succeededOrFailed()
-    inputs:
-      codeCoverageTool: Cobertura
-      summaryFileLocation: 'src/angular7/coverage/cobertura-coverage.xml'
-      reportDirectory: src/angular7/coverage
-      failIfCoverageEmpty: true
+ # - task: PublishCodeCoverageResults@1
+  #  displayName: 'Publish code coverage Angular results'
+  #  condition: succeededOrFailed()
+  #  inputs:
+   #   codeCoverageTool: Cobertura
+    #  summaryFileLocation: 'src/angular7/coverage/cobertura-coverage.xml'
+    #  reportDirectory: src/angular7/coverage
+    #  failIfCoverageEmpty: true
   
-  - task: PublishTestResults@2
-    displayName: 'Publish Angular test results'
-    condition: succeededOrFailed()
-    inputs:
-      searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
-      testRunTitle: Angular
-      testResultsFormat: JUnit
-      testResultsFiles: "**/TESTS*.xml"
+  #- task: PublishTestResults@2
+  #  displayName: 'Publish Angular test results'
+  #  condition: succeededOrFailed()
+   # inputs:
+   #   searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
+   #   testRunTitle: Angular
+   #   testResultsFormat: JUnit
+    #  testResultsFiles: "**/TESTS*.xml"
   
   - task: Npm@1
     displayName: 'Lint Angular'
@@ -121,6 +121,7 @@ jobs:
       echo '#                                  Starting E2E Tests                                             #'
       echo '###################################################################################################'
       ng e2e
+    displayName: 'Running E2E Tests'
 
   
   - task: PublishTestResults@2
